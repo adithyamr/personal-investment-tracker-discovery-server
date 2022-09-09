@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      name: discovery-server
+      profile: dev
+
+  config:
+    import:
+    - configserver:http://docker.for.mac.localhost:9000
+
+eureka:
+  client:
+    registerWithEureka: false   
+    fetchRegistry: false
